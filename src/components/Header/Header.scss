@@ -1,6 +1,88 @@
 @import '../../assets/style/style.scss';
+
 .header {
      background-color: $mainDark;
      height: 100vh;
-     width: 10%;
+     width: 7%;
+}
+
+.logo {
+     border-radius: 12px;
+     background: rgba(235, 149, 106, 0.267);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 56px;
+     height: 56px;
+}
+
+.nav {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     height: 100%;
+     padding-left: 12px;
+}
+
+.nav__list {
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+     height: 100%;
+     margin-top: 26px;
+
+     .active{
+          background-color: $darkGray;
+          .item__link{
+               background-color: $lightPink;
+               color: white;
+          }
+     }
+}
+.nav__item {
+     padding: 32px;
+     border-radius: 12px 0px 0px 12px;
+     position: relative;
+     display: flex;
+     justify-content: center;
+}
+
+
+.active::before {
+     content: '';
+     width: 12px;
+     height: 12px;
+     display: block;
+     position: absolute;
+     background-image: url(../../assets/img/burchak.svg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     top: -12px;
+     right: 0;
+     transform: rotate(90deg);
+}
+
+.active::after {
+     content: '';
+     width: 12px;
+     height: 12px;
+     display: block;
+     position: absolute;
+     background-image: url(../../assets/img/burchak.svg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     bottom: -12px;
+     right: 0;
+}
+
+.item__link {
+     width: 56px;
+     height: 56px;
+     border-radius: 8px;
+     padding: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: $lightPink;
+     font-size: 26px;
 }

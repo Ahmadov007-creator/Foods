@@ -1,9 +1,10 @@
 import React from 'react'
 import './Header.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../../assets/img/logo.svg'
 
 function Header() {
+    let location = useLocation().pathname
     return (
         <header className='header'>
             <nav className="nav">
@@ -11,38 +12,38 @@ function Header() {
                     <img src={logo} alt="" />
                 </Link>
                 <ul className="nav__list">
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/' ? "nav__item active" : "nav__item"}>
+                        <Link to='/' className='item__link'>
                             <i class="bi bi-house"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/percent' ? "nav__item active" : "nav__item"}>
+                        <Link to='/percent' className='item__link'>
                             <i class="bi bi-percent"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/chart' ? "nav__item active" : "nav__item"}>
+                        <Link to='/chart' className='item__link'>
                             <i class="bi bi-pie-chart"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/email' ? "nav__item active" : "nav__item"}>
+                        <Link to='/email' className='item__link'>
                             <i class="bi bi-envelope"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/notification' ? "nav__item active" : "nav__item"}>
+                        <Link to='/notification' className='item__link'>
                             <i class="bi bi-bell"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/setting' ? "nav__item active" : "nav__item"}>
+                        <Link to='/setting' className='item__link'>
                             <i class="bi bi-gear"></i>
                         </Link>
                     </li>
-                    <li className="nav__item">
-                        <Link>
+                    <li className={location == '/logout' ? "nav__item active" : "nav__item"}>
+                        <Link to='/logout' className='item__link'>
                             <i class="bi bi-box-arrow-right"></i>
                         </Link>
                     </li>

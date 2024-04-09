@@ -1,5 +1,6 @@
+@import '../../assets/style/style.scss';
 .home{
-    background-color: crimson;
+    background-color: $darkGray;
     flex-grow: 1;
     height: 100vh;
 }
