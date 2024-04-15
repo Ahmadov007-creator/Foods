@@ -5,11 +5,11 @@ function Order() {
     let locData = JSON.parse(window.localStorage.getItem('localfood'))
     return (
         <div className='order'>
-            <h2>Orders #34562</h2>
+            <h2 className='ord__h2'>Orders #34562</h2>
             <span>
-                <button>Dine In</button>
-                <button>To Go</button>
-                <button>Delivery</button>
+                <button className='btn__dine'>Dine In</button>
+                <button className='btn__dine'>To Go</button>
+                <button className='btn__dine'>Delivery</button>
             </span>
             <div className="order__info">
                 <p>Item</p>
@@ -22,7 +22,7 @@ function Order() {
                 {
                     locData && locData.map((item, index) => (
                         <li key={index} className="order__item">
-                        <div className="item__top">
+                            <div className="item__top">
                                 <img src={item.img} alt="" />
                                 <span>
                                     <h4>{item.name}</h4>

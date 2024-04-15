@@ -1,4 +1,5 @@
 @import '../../assets/style/style.scss';
+
 .order {
     width: 35%;
     padding: 21px;
@@ -21,7 +22,8 @@
     }
 
 }
-.order__list{
+
+.order__list {
     height: 600px;
     overflow-y: scroll;
 }
@@ -29,11 +31,13 @@
 .order__item {
     color: white;
     margin-top: 10px;
+
     .item__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        span{
+
+        span {
             display: block;
             width: 45%;
         }
@@ -56,12 +60,14 @@
             background-color: $darkGray;
         }
     }
-    .item__bot{
+
+    .item__bot {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 5px;
-        input{
+
+        input {
             background-color: transparent;
             padding: 14px;
             border-radius: 8px;
@@ -70,14 +76,16 @@
             width: 75%;
             outline: none;
         }
-        button{
+
+        button {
             background-color: transparent;
             border: 1px solid $lightPink;
             padding: 14px;
             color: $lightPink;
             border-radius: 8px;
             transition: all ease 0.3s;
-            &:hover{
+
+            &:hover {
                 background-color: $lightPink;
                 color: white;
 
@@ -85,4 +93,31 @@
 
         }
     }
+}
+
+.ord__h2 {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.btn__dine {
+    border-radius: 8px;
+    background: rgb(31, 29, 43);
+    border: 1px solid rgb(57, 60, 73);
+    padding: 12px;
+    color: rgb(234, 124, 105);
+    border: none;
+    margin-top: 24px;
+    margin-left: 8px;
+}
+.btn__dine:hover{
+    background: rgb(234, 124, 105);
+    color: white;
+}
+.order__info{
+    font-size: 22px;
+    border-bottom:  1px solid rgb(57, 60, 73);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
