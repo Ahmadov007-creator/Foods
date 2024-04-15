@@ -1,0 +1,88 @@
+@import '../../assets/style/style.scss';
+.order {
+    width: 35%;
+    padding: 21px;
+    background-color: $mainDark;
+}
+
+.order__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 24px;
+
+    span {
+        width: 30%;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+.order__list{
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.order__item {
+    color: white;
+    margin-top: 10px;
+    .item__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+            display: block;
+            width: 45%;
+        }
+
+        img {
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .item__count {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(57, 60, 73);
+            border-radius: 8px;
+            background-color: $darkGray;
+        }
+    }
+    .item__bot{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        input{
+            background-color: transparent;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid rgb(57, 60, 73);
+            background-color: $darkGray;
+            width: 75%;
+            outline: none;
+        }
+        button{
+            background-color: transparent;
+            border: 1px solid $lightPink;
+            padding: 14px;
+            color: $lightPink;
+            border-radius: 8px;
+            transition: all ease 0.3s;
+            &:hover{
+                background-color: $lightPink;
+                color: white;
+
+            }
+
+        }
+    }
+}
